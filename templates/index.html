@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AwesomeApplication.com</title>
+</head>
+<body>
+    <a href="{{ url_for('get_users') }}">View All Users</a>
+    <h1>Add User</h1>
+    <form action="/add-user" method="POST">
+        <h4>Username</h4>
+        <input type="text" name="username">
+        <h4>Email</h4>
+        <input type="text" name="email">
+        <button type="submit">Add User</button>
+    </form>
+
+    <h1>Update User</h1>
+    <form action="/update-username" method="POST">
+        <h4>Old Username</h4>
+        <input type="text" name="old_username">
+        <h4>New Username</h4>
+        <input type="text" name="new_username">
+        <button type="submit">Update Username</button>
+    </form>
+    <h1>Delete User</h1>
+    <form action="/delete-user" method="POST">
+        <h4>Username</h4>
+        <input type="text" name="username">
+        <button type="submit">Delete User</button>
+    </form>
+</body>
+</html>
